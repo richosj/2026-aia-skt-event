@@ -1,0 +1,43 @@
+<div class="modal-root" id="modal-consent" role="dialog" aria-modal="true" aria-labelledby="modal-consent-title" aria-hidden="true">
+	<div class="modal">
+		<div class="modal__head">
+			<h2 class="modal__title" id="modal-consent-title">이벤트 및 상품소개를 위한 개인정보처리 동의</h2>
+			<button type="button" class="modal__close" data-modal-close aria-label="닫기">×</button>
+		</div>
+		<div class="modal__body">
+			<p class="modal__intro">AIA생명보험 및 당사의 업무수탁자는 아래와 같이 수집·이용 목적에 필요한 최소한의 개인정보를 수집하며, 목적 외의 용도로는 사용하지 않습니다.</p>
+
+			<div class="consent-block">
+				<p class="consent-block__title">상품소개 등을 위한 개인정보처리 동의 (필수)</p>
+				<div class="consent-radios">
+					<label class="radio-line"><input type="radio" name="consent_product" value="agree"> 동의함</label>
+					<label class="radio-line"><input type="radio" name="consent_product" value="disagree" checked> 동의 안 함</label>
+				</div>
+				<div class="consent-scroll" tabindex="0">
+					<p>1. 수집·이용 목적</p>
+					<p class="consent-em">전화를 통한 상품·서비스 관련 상담 안내 및 판매</p>
+					<p>이벤트 안내, 설문조사, 민원처리 및 경품발송</p>
+					<p>2. 수집 항목: 성명, 생년월일, 성별, 연락처 등</p>
+					<p>3. 보유·이용 기간: 동의일로부터 1년 또는 목적 달성 시까지</p>
+				</div>
+			</div>
+
+			<div class="consent-block">
+				<p class="consent-block__title">이벤트를 위한 개인정보 수집·이용 동의 (필수)</p>
+				<div class="consent-radios">
+					<label class="radio-line"><input type="radio" name="consent_event" value="agree"> 동의함</label>
+					<label class="radio-line"><input type="radio" name="consent_event" value="disagree" checked> 동의 안 함</label>
+				</div>
+				<div class="consent-scroll" tabindex="0">
+					<p>AIA생명보험 주식회사(이하 '회사')가 이벤트 진행 등을 목적으로 아래와 같이 본인의 개인정보를 수집·이용하는 것에 동의합니다.</p>
+					<p>1. 수집·이용 목적: 이벤트 응모·당첨자 확인·경품 발송</p>
+					<p>2. 수집 항목: 성명, 휴대전화번호 등</p>
+					<p>3. 보유·이용 기간: 이벤트 종료 후 3개월 이내 파기</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal__foot">
+			<button type="button" class="btn-modal-confirm" id="btn-consent-ok">확인</button>
+		</div>
+	</div>
+</div>

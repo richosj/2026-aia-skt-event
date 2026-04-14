@@ -1,0 +1,140 @@
+@use "tokens" as *;
+@use "functions" as *;
+
+.page-survey {
+  background: $bg-survey;
+}
+
+.survey-hero-text {
+  text-align: center;
+}
+
+.survey-kicker {
+  display: block;
+  font-size: rem(28);
+  line-height: 120%;
+  color: $text-primary;
+  padding-bottom: rem(2);
+}
+
+.survey-title-line {
+  font-weight: 700;
+  font-size: rem(45);
+  color: $text-primary;
+  
+  line-height: 120%;
+  em{
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.survey-title-line .accent {
+  color: $aia-red;
+}
+
+.survey-visual {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.survey-question {
+  text-align: center;
+  padding: rem(40) 0 0;
+} 
+
+.survey-question__pre {
+  
+  font-size: rem(32);
+  color: $text-primary;
+  margin-bottom: rem(4);
+  line-height: 120%;
+  
+  
+}
+
+.survey-question__main {
+  font-weight: 700;
+  font-size: rem(32);
+  line-height: 120%;
+  
+  color: $text-primary;
+}
+
+.survey-question__main .accent {
+  color: $aia-red;
+}
+
+.survey-question__sub {
+  margin-top: rem(10);
+  font-size: rem(20);
+  color: $text-muted;
+  font-weight: 400;
+  line-height: 120%;
+  
+}
+
+.pick-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: rem(10);
+  padding: rem(30) 0 rem(0);
+  justify-content: center;
+}
+
+.pick-card {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  &--active {
+    .pick-card__icon img:first-child {
+      opacity: 0;
+    }
+
+    .pick-card__icon img:last-child {
+      opacity: 1;
+    }
+  }
+}
+
+.pick-card__icon {
+  position: relative;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.15s ease;
+  }
+
+  img:first-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  img:last-child {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.survey-footer-note {
+  text-align: center;
+  font-size: rem(18);
+  color: $text-muted;
+  
+  line-height: 120%;
+  
+  font-weight: 400;
+  padding: rem(40) 0 rem(60);
+}

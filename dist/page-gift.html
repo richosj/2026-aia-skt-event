@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>경품 선택 — AIA SKT 이벤트</title>
+	<link rel="shortcut icon" href="./favicon.ico">
+  <script crossorigin src="./assets/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
+</head>
+
+<body class="page-gift" data-page="gift">
+	<!-- 다른 타입: .gift-heading, .gift-card 이미지·라벨, 폼 문구 동일 구조로 교체 -->
+	<div class="wrap">
+		<header class="header">
+			<h1 class="logo">
+				<a href="./list.html" aria-label="AIA">
+					<img src="./images/logo.svg" width="120" height="22" alt="AIA">
+				</a>
+			</h1>
+		</header>
+
+		<div class="gift-top">
+			<section class="gift-heading">
+				<h2 class="gift-heading__title">AIA생명!<br>간단 설문 참여 감사합니다</h2>
+				<p class="gift-heading__sub">원하시는 경품(기프티콘)을 선택해주세요. (택 1)</p>
+			</section>
+
+			<div class="gift-cards" role="radiogroup" aria-label="경품 선택">
+				<button type="button" class="gift-card" data-gift="coffee" aria-checked="false" role="radio">
+					<div class="gift-card__thumb">
+						<img src="./images/gift-thumb-coffee.svg" width="120" height="120" alt="메가커피 핫">
+					</div>
+					<p class="gift-card__label">메가 MGC 커피 (HOT)</p>
+				</button>
+				<button type="button" class="gift-card" data-gift="cu" aria-checked="false" role="radio">
+					<div class="gift-card__thumb">
+						<img src="./images/gift-thumb-cu.svg" width="120" height="120" alt="CU 상품권">
+					</div>
+					<p class="gift-card__label">CU 모바일 상품권 (2,000원)</p>
+				</button>
+				<button type="button" class="gift-card gift-card--selected" data-gift="milk" aria-checked="true" role="radio">
+					<div class="gift-card__thumb">
+						<img src="./images/gift-thumb-milk.svg" width="120" height="120" alt="빙그레 바나나우유">
+					</div>
+					<p class="gift-card__label">빙그레 바나나 우유 240ml</p>
+				</button>
+			</div>
+
+			<section class="gift-form-section">
+				<p class="gift-form-section__lead">기프티콘 받으실 정보를 정확히 입력해주세요.</p>
+				<form id="gift-form" novalidate>
+					<div class="field">
+						<label class="sr-only" for="f-name">이름</label>
+						<input class="input" id="f-name" name="name" type="text" placeholder="이름" autocomplete="name">
+					</div>
+					<div class="field row-birth">
+						<label class="sr-only" for="f-birth">생년월일</label>
+						<input class="input" id="f-birth" name="birth" type="text" inputmode="numeric" placeholder="생년월일" autocomplete="bday">
+						<div class="gender-toggle" role="group" aria-label="성별">
+							<button type="button" class="gender-btn gender-btn--on" data-gender="M">남</button>
+							<button type="button" class="gender-btn" data-gender="F">여</button>
+						</div>
+					</div>
+					<input type="hidden" name="gender" id="f-gender" value="M">
+					<div class="field">
+						<label class="sr-only" for="f-phone">휴대폰번호</label>
+						<input class="input" id="f-phone" name="phone" type="tel" inputmode="numeric" placeholder="휴대폰번호 (-제외)" autocomplete="tel">
+					</div>
+					<button type="submit" class="btn-submit">참여하기</button>
+				</form>
+			</section>
+		</div>
+
+		<section class="gift-notice" aria-labelledby="notice-title">
+			<h3 class="gift-notice__head" id="notice-title">
+				<img src="./images/ico-info.svg" alt="" width="18" height="18">
+				유의사항
+			</h3>
+			<ul class="gift-notice__list">
+				<li>본 이벤트는 AIA생명의 보험상품 가입 권유 목적의 마케팅 활동으로, 경품 지급을 위해 최소한의 개인정보를 수집합니다.</li>
+				<li>경품은 이벤트 종료 후 일괄 발송되며, 휴대전화번호 오기재 등으로 인한 재발송은 불가합니다.</li>
+				<li>당첨자 발표 및 경품 발송 일정은 내부 사정에 따라 변경될 수 있습니다.</li>
+				<li>부정한 방법으로 참여한 경우 당첨이 취소될 수 있습니다.</li>
+				<li>경품 이미지는 이해를 돕기 위한 예시이며 실제와 다를 수 있습니다.</li>
+				<li>문의사항은 AIA생명 고객센터로 연락 주시기 바랍니다.</li>
+				<li>개인정보는 관련 법령에 따라 안전하게 관리·파기됩니다.</li>
+				<li>이벤트는 당사 사정에 따라 조기 종료될 수 있습니다.</li>
+				<li>기타 상세 내용은 당사 홈페이지의 이벤트 유의사항을 참고해 주세요.</li>
+			</ul>
+			<p class="gift-notice__compliance">AIA생명 준법감시인 확인필 COM-2026-04-0027 (2026.04.06~2027.04.05)</p>
+		</section>
+	</div>
+
+	<!-- 팝업: 개인정보 동의 (3번 시안) -->
+	<div class="modal-root" id="modal-consent" role="dialog" aria-modal="true" aria-labelledby="modal-consent-title" aria-hidden="true">
+		<div class="modal">
+			<div class="modal__head">
+				<h2 class="modal__title" id="modal-consent-title">이벤트 및 상품소개를 위한 개인정보처리 동의</h2>
+				<button type="button" class="modal__close" data-modal-close aria-label="닫기">×</button>
+			</div>
+			<div class="modal__body">
+				<p class="modal__intro">AIA생명보험 및 당사의 업무수탁자는 아래와 같이 수집·이용 목적에 필요한 최소한의 개인정보를 수집하며, 목적 외의 용도로는 사용하지 않습니다.</p>
+				<div class="consent-block">
+					<p class="consent-block__title">상품소개 등을 위한 개인정보처리 동의 (필수)</p>
+					<div class="consent-radios">
+						<label class="radio-line"><input type="radio" name="consent_product" value="agree"> 동의함</label>
+						<label class="radio-line"><input type="radio" name="consent_product" value="disagree" checked> 동의 안 함</label>
+					</div>
+					<div class="consent-scroll" tabindex="0">
+						<p>1. 수집·이용 목적</p>
+						<p class="consent-em">전화를 통한 상품·서비스 관련 상담 안내 및 판매</p>
+						<p>이벤트 안내, 설문조사, 민원처리 및 경품발송</p>
+						<p>2. 수집 항목: 성명, 생년월일, 성별, 연락처 등</p>
+						<p>3. 보유·이용 기간: 동의일로부터 1년 또는 목적 달성 시까지</p>
+					</div>
+				</div>
+				<div class="consent-block">
+					<p class="consent-block__title">이벤트를 위한 개인정보 수집·이용 동의 (필수)</p>
+					<div class="consent-radios">
+						<label class="radio-line"><input type="radio" name="consent_event" value="agree"> 동의함</label>
+						<label class="radio-line"><input type="radio" name="consent_event" value="disagree" checked> 동의 안 함</label>
+					</div>
+					<div class="consent-scroll" tabindex="0">
+						<p>AIA생명보험 주식회사(이하 '회사')가 이벤트 진행 등을 목적으로 아래와 같이 본인의 개인정보를 수집·이용하는 것에 동의합니다.</p>
+						<p>1. 수집·이용 목적: 이벤트 응모·당첨자 확인·경품 발송</p>
+						<p>2. 수집 항목: 성명, 휴대전화번호 등</p>
+						<p>3. 보유·이용 기간: 이벤트 종료 후 3개월 이내 파기</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal__foot">
+				<button type="button" class="btn-modal-confirm" id="btn-consent-ok">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 팝업: 참여 완료 (4번 시안) -->
+	<div class="modal-root" id="modal-complete" role="dialog" aria-modal="true" aria-labelledby="modal-complete-title" aria-hidden="true">
+		<div class="modal modal--complete">
+			<div class="modal__head">
+				<h2 class="modal__title" id="modal-complete-title">이벤트 참여 신청 완료</h2>
+				<button type="button" class="modal__close" data-modal-close aria-label="닫기">×</button>
+			</div>
+			<div class="modal__body">
+				<div class="complete-visual">
+					<img class="complete-visual__img" src="./images/visual02.svg" width="120" height="120" alt="">
+					<img class="complete-visual__check" src="./images/ico-check-complete.svg" width="64" height="64" alt="" aria-hidden="true">
+				</div>
+				<p class="complete-msg">보험상담 신청 이벤트 참여가<br>완료되었습니다.</p>
+				<p class="complete-sub">이벤트 당첨시 기프티콘을 발송해드립니다.<br>빠른 시일 내에 AIA 전문상담원이 보장내역과 보험료를 친절하게 설명해드립니다. (평일기준)</p>
+			</div>
+			<div class="modal__foot">
+				<button type="button" class="btn-modal-confirm" data-modal-close>확인</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
