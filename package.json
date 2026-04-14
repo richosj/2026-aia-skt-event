@@ -1,7 +1,7 @@
 {
-  "name": "welcomebank-mobile-2025",
+  "name": "2026-aia-skt-event",
   "version": "1.0.0",
-  "homepage": "https://github.com/richosj/welcomebank-mobile-2025",
+  "homepage": "https://github.com/richosj/2026-aia-skt-event",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
