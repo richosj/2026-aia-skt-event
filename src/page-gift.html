@@ -90,40 +90,57 @@
 		</section>
 	</div>
 
-	<!-- 팝업: 개인정보 동의 (3번 시안) -->
+	<!-- 팝업: 개인정보 동의 -->
 	<div class="modal-root" id="modal-consent" role="dialog" aria-modal="true" aria-labelledby="modal-consent-title" aria-hidden="true">
 		<div class="modal">
 			<div class="modal__head">
-				<h2 class="modal__title" id="modal-consent-title">이벤트 및 상품소개를 위한 개인정보처리 동의</h2>
-				<button type="button" class="modal__close" data-modal-close aria-label="닫기">×</button>
+				<h2 class="modal__title" id="modal-consent-title">이벤트 및 상품소개를 위한 <br>개인정보처리 동의</h2>
+				<button type="button" class="modal__close" data-modal-close aria-label="닫기"></button>
 			</div>
 			<div class="modal__body">
-				<p class="modal__intro">AIA생명보험 및 당사의 업무수탁자는 아래와 같이 수집·이용 목적에 필요한 최소한의 개인정보를 수집하며, 목적 외의 용도로는 사용하지 않습니다.</p>
+				<p class="modal__intro">AIA생명보험 및 당사의 업무수탁자는 아래와 같이 <br>수집·이용 목적에 필요한 최소한의 개인정보를 수집<br>하며, 목적 외의 용도로는 사용하지 않습니다.</p>
 				<div class="consent-block">
-					<p class="consent-block__title">상품소개 등을 위한 개인정보처리 동의 (필수)</p>
+					<p class="consent-block__title">상품소개 등을 위한 개인정보처리 동의 <span>(필수)</span></p>
 					<div class="consent-radios">
-						<label class="radio-line"><input type="radio" name="consent_product" value="agree"> 동의함</label>
-						<label class="radio-line"><input type="radio" name="consent_product" value="disagree" checked> 동의 안 함</label>
+						<label class="radio-line"><input type="radio" name="consent_product" value="agree"><span class="radio-line__check"></span>동의함</label>
+						<label class="radio-line"><input type="radio" name="consent_product" value="disagree" checked><span class="radio-line__check"></span>동의 안 함</label>
 					</div>
 					<div class="consent-scroll" tabindex="0">
-						<p>1. 수집·이용 목적</p>
-						<p class="consent-em">전화를 통한 상품·서비스 관련 상담 안내 및 판매</p>
-						<p>이벤트 안내, 설문조사, 민원처리 및 경품발송</p>
-						<p>2. 수집 항목: 성명, 생년월일, 성별, 연락처 등</p>
-						<p>3. 보유·이용 기간: 동의일로부터 1년 또는 목적 달성 시까지</p>
+						<h4 class="consent-doc__section-title">1. 수집·이용 목적</h4>
+						<p class="consent-doc__em mb-type-2">전화를 통한 상품·서비스 관련 상담 안내 및 판매</p>
+						<p class="consent-doc__text">이벤트 안내, 설문조사, 민원처리 및 경품발송</p>
+						<h4 class="consent-doc__section-title">2. 보유 및 이용기간</h4>
+						<p class="consent-doc__em">동의일로부터 최대 2년</p>
+						<h4 class="consent-doc__section-title">3. 수집·이용 항목</h4>
+						<p class="consent-doc__text mb-type-2">일반개인정보(성명, 생년월일, 성별, 휴대폰번호, 상담이력, 당사 보험 관련 사이트 이용 정보)</p>
+						<ul class="consent-doc__list">
+							<li>귀하는 상기 동의를 거부할 수 있으며, 동의하시더라도 철회할 수 있습니다. 다만, 동의를 거부 또는 철회하실 경우 보험상품 · 서비스 상담 및 안내 그리고 보험상담신청 이벤트 참여 및 경품제공 불가합니다.</li>
+							<li>본 동의는 AIA생명과 모집위탁계약을 체결한 업무수탁자(보험설계사 및 보험대리점)가 수집ㆍ이용하는 것을 포함합니다.</li>
+							<li class="point">상기 내용에 동의하시는 경우 당사 임직원 또는 업무 수탁자가 전화로 상품 서비스 소개 및 판매 안내 연락(TM 등)을 드릴 수 있습니다.</li>
+						</ul>
 					</div>
 				</div>
 				<div class="consent-block">
-					<p class="consent-block__title">이벤트를 위한 개인정보 수집·이용 동의 (필수)</p>
+					<p class="consent-block__title">이벤트를 위한 개인정보 수집·이용 동의 <span>(필수)</span></p>
 					<div class="consent-radios">
-						<label class="radio-line"><input type="radio" name="consent_event" value="agree"> 동의함</label>
-						<label class="radio-line"><input type="radio" name="consent_event" value="disagree" checked> 동의 안 함</label>
+						<label class="radio-line"><input type="radio" name="consent_event" value="agree"><span class="radio-line__check"></span>동의함</label>
+						<label class="radio-line"><input type="radio" name="consent_event" value="disagree" checked><span class="radio-line__check"></span>동의 안 함</label>
 					</div>
 					<div class="consent-scroll" tabindex="0">
-						<p>AIA생명보험 주식회사(이하 '회사')가 이벤트 진행 등을 목적으로 아래와 같이 본인의 개인정보를 수집·이용하는 것에 동의합니다.</p>
-						<p>1. 수집·이용 목적: 이벤트 응모·당첨자 확인·경품 발송</p>
-						<p>2. 수집 항목: 성명, 휴대전화번호 등</p>
-						<p>3. 보유·이용 기간: 이벤트 종료 후 3개월 이내 파기</p>
+						<p class="consent-doc__lead">AIA생명보험 주식회사 (이하 ‘회사’ 가 이벤트 진행 등을 목적으로 아래와 같이 본인의 개인정보를 수집 · 이용하는 것에 동의합니다.</p>
+						<h4 class="consent-doc__section-title">1. 수집·이용 목적</h4>
+						<p class="consent-doc__text">이벤트 안내, 설문조사, 경품 제공 및 관련 업무 처리 (당첨자 안내, 경품 제공, 문의 민원 처리 등)</p>
+						<h4 class="consent-doc__section-title">2. 수집·이용 항목</h4>
+						<p class="consent-doc__text">일반개인정보 (이름, 휴대폰번호)</p>
+						<h4 class="consent-doc__section-title">3. 보유 및 이용기간</h4>
+						<p class="consent-doc__em">동의일로부터 3개월</p>
+						<p class="consent-doc__text mb-type-2">귀하는 본 동의를 거부할 수 있습니다. 다만, <br>동의를 거부하실 경우 이벤트 참가 및 경품 제공 등 이벤트 관련 업무 처리가 제한될 수 있습니다.</p>
+						<h4 class="consent-doc__section-title">(안내) 개인정보 처리 위탁 안내</h4>
+						<p class="consent-doc__text">회사는 이벤트 진행 등의 목적으로 아래와 같이 개인정보를 처리 위탁합니다.</p>
+						<ul class="consent-doc__list">
+							<li>위탁 받는 자: 주식회사 조선일보사</li>
+							<li>위탁 업무: 경품 대상자 안내, 경품 제공, 문의 및 민원 사항 처리</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -133,20 +150,19 @@
 		</div>
 	</div>
 
-	<!-- 팝업: 참여 완료 (4번 시안) -->
+	<!-- 팝업: 참여 완료 -->
 	<div class="modal-root" id="modal-complete" role="dialog" aria-modal="true" aria-labelledby="modal-complete-title" aria-hidden="true">
 		<div class="modal modal--complete">
 			<div class="modal__head">
 				<h2 class="modal__title" id="modal-complete-title">이벤트 참여 신청 완료</h2>
-				<button type="button" class="modal__close" data-modal-close aria-label="닫기">×</button>
+				<button type="button" class="modal__close" data-modal-close aria-label="닫기"></button>
 			</div>
-			<div class="modal__body">
+			<div class="modal__body shrink-auto">
 				<div class="complete-visual">
-					<img class="complete-visual__img" src="./images/visual02.svg" width="120" height="120" alt="">
-					<img class="complete-visual__check" src="./images/ico-check-complete.svg" width="64" height="64" alt="" aria-hidden="true">
+					<img class="complete-visual__img" src="./images/complete.png">
 				</div>
 				<p class="complete-msg">보험상담 신청 이벤트 참여가<br>완료되었습니다.</p>
-				<p class="complete-sub">이벤트 당첨시 기프티콘을 발송해드립니다.<br>빠른 시일 내에 AIA 전문상담원이 보장내역과 보험료를 친절하게 설명해드립니다. (평일기준)</p>
+				<p class="complete-sub">이벤트 당첨시 기프티콘을 발송해드립니다.<br><br>빠른 시일 내에 AIA 전문상담원이 <br>보장내역과 보험료를 친절하게 설명해드립니다. <br>(평일기준)</p>
 			</div>
 			<div class="modal__foot">
 				<button type="button" class="btn-modal-confirm" data-modal-close>확인</button>

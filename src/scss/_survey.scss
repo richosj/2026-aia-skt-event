@@ -3,6 +3,9 @@
 
 .page-survey {
   background: $bg-survey;
+  &.page-survey-2{
+    background: #FFE5D2;
+  }
 }
 
 .survey-hero-text {

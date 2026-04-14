@@ -58,19 +58,6 @@ function initModalLayer(root) {
 function initModals(scope = document) {
   scope.querySelectorAll(".modal-root").forEach(initModalLayer);
 }
-function initSurvey() {
-  document.querySelectorAll(".pick-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".pick-card").forEach((c) => {
-        c.classList.remove("pick-card--active");
-        c.setAttribute("aria-pressed", "false");
-      });
-      card.classList.add("pick-card--active");
-      card.setAttribute("aria-pressed", "true");
-      window.location.href = "./page-gift.html";
-    });
-  });
-}
 function initGift() {
   var _a;
   initModals();
