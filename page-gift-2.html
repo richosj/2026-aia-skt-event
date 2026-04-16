@@ -42,7 +42,7 @@
 						<img src="./images/gift-cu-selected.png" alt="CU 상품권">
 					</div>
 				</button>
-				<button type="button" class="gift-card gift-card--selected" data-gift="milk" aria-checked="true" role="radio">
+				<button type="button" class="gift-card gift-card--selected" data-gift="milk" aria-checked="false" role="radio">
 					<div class="gift-card__thumb">
 						<img src="./images/gift-milk.png" alt="빙그레 바나나우유">
 						<img src="./images/gift-milk-selected.png" alt="빙그레 바나나우유">
@@ -61,7 +61,8 @@
 						<label class="sr-only" for="f-birth">생년월일</label>
 						<input class="input" id="f-birth" name="birth" type="text" inputmode="numeric" placeholder="생년월일 (8자리)" autocomplete="bday" maxlength="8" pattern="[0-9]{8}">
 						<div class="gender-toggle" role="group" aria-label="성별">
-							<button type="button" class="gender-btn gender-btn--on" data-gender="M">남</button>
+							<!-- gender-btn--on 추가시 활성화 -->
+							<button type="button" class="gender-btn" data-gender="M">남</button>
 							<button type="button" class="gender-btn" data-gender="F">여</button>
 						</div>
 					</div>
