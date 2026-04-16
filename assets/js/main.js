@@ -61,27 +61,6 @@ function initModals(scope = document) {
 function initGift() {
   var _a;
   initModals();
-  document.querySelectorAll(".gift-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".gift-card").forEach((c) => {
-        c.classList.remove("gift-card--selected");
-        c.setAttribute("aria-checked", "false");
-      });
-      card.classList.add("gift-card--selected");
-      card.setAttribute("aria-checked", "true");
-    });
-  });
-  document.querySelectorAll(".gender-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const group = btn.closest(".gender-toggle");
-      group.querySelectorAll(".gender-btn").forEach((b) => {
-        b.classList.remove("gender-btn--on");
-      });
-      btn.classList.add("gender-btn--on");
-      const hidden = document.getElementById("f-gender");
-      if (hidden) hidden.value = btn.dataset.gender || "";
-    });
-  });
   const form = document.getElementById("gift-form");
   const consent = document.getElementById("modal-consent");
   const complete = document.getElementById("modal-complete");
@@ -108,7 +87,6 @@ function initModalsDemoPage() {
 }
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
-  if (page === "survey") initSurvey();
-  else if (page === "gift") initGift();
+  if (page === "gift") initGift();
   else if (page === "modals") initModalsDemoPage();
 });

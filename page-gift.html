@@ -176,6 +176,33 @@
 
 	<script>
 		(function () {
+			document.querySelectorAll(".gift-card").forEach(function (card) {
+				card.addEventListener("click", function () {
+					document.querySelectorAll(".gift-card").forEach(function (c) {
+						c.classList.remove("gift-card--selected");
+						c.setAttribute("aria-checked", "false");
+					});
+					card.classList.add("gift-card--selected");
+					card.setAttribute("aria-checked", "true");
+				});
+			});
+
+			document.querySelectorAll(".gender-btn").forEach(function (btn) {
+				btn.addEventListener("click", function () {
+					var group = btn.closest(".gender-toggle");
+					if (!group) return;
+					group.querySelectorAll(".gender-btn").forEach(function (b) {
+						b.classList.remove("gender-btn--on");
+					});
+					btn.classList.add("gender-btn--on");
+					var hidden = document.getElementById("f-gender");
+					if (hidden) hidden.value = btn.getAttribute("data-gender") || "";
+				});
+			});
+		})();
+	</script>
+	<script>
+		(function () {
 			function digitsOnly(str, maxLen) {
 				var d = String(str).replace(/\D/g, "");
 				return maxLen != null ? d.slice(0, maxLen) : d;
