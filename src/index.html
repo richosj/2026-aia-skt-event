@@ -61,6 +61,20 @@
 	</div>
 
 	<script src="./js/main.js" type="module"></script>
+	<script>
+		(function () {
+			document.querySelectorAll(".pick-card").forEach(function (btn) {
+				btn.addEventListener("click", function () {
+					document.querySelectorAll(".pick-card").forEach(function (b) {
+						b.classList.remove("pick-card--active");
+						b.setAttribute("aria-pressed", "false");
+					});
+					btn.classList.add("pick-card--active");
+					btn.setAttribute("aria-pressed", "true");
+				});
+			});
+		})();
+	</script>
 </body>
 
 </html>

@@ -62,6 +62,20 @@
 		<p class="survey-footer-note">관심상품을 선택하면 경품 선택페이지로 이동 됩니다.</p>
 	</div>
 
+	<script>
+		(function () {
+			document.querySelectorAll(".pick-card").forEach(function (btn) {
+				btn.addEventListener("click", function () {
+					document.querySelectorAll(".pick-card").forEach(function (b) {
+						b.classList.remove("pick-card--active");
+						b.setAttribute("aria-pressed", "false");
+					});
+					btn.classList.add("pick-card--active");
+					btn.setAttribute("aria-pressed", "true");
+				});
+			});
+		})();
+	</script>
 </body>
 
 </html>
