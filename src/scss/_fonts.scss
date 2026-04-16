@@ -4,7 +4,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  src: url("../../public/fonts/Pretendard-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
+  src: url("../../public/fonts/Pretendard-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  src: url("../../public/fonts/Pretendard-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -28,7 +28,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+  src: url("../../public/fonts/Pretendard-Bold.woff2") format("woff2");
 }
 
 /* Paperlogy — 타이틀·강조 */
@@ -37,7 +37,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Paperlogy-4Regular.woff2") format("woff2");
+  src: url("../../public/fonts/Paperlogy-4Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -45,7 +45,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Paperlogy-6SemiBold.woff2") format("woff2");
+  src: url("../../public/fonts/Paperlogy-6SemiBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -53,5 +53,5 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("/fonts/Paperlogy-7Bold.woff2") format("woff2");
+  src: url("../../public/fonts/Paperlogy-7Bold.woff2") format("woff2");
 }

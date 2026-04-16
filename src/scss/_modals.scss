@@ -65,13 +65,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: url("../images/ico-close.png") no-repeat center center / contain;
+  background: url("../../public/images/ico-close.png") no-repeat center center /
+    contain;
 }
 
 .modal__body {
   padding: rem-375(30) 0 0;
   overflow-y: auto;
-  flex: 1;
+  //flex: 1;
   min-height: 0;
   &.shrink-auto{
     flex: 0 0 auto;
@@ -98,6 +99,7 @@
   font-family: "Pretendard";
   font-weight: 600;
   font-size: rem-375(18);
+  font-size: clamp(rem-375(18), rem-375(18), 1.8rem);
   line-height: 120%;
   letter-spacing: -2%;
   margin-bottom: rem-375(10);
@@ -262,7 +264,7 @@
 }
 
 .modal__foot {
-  padding: rem-375(30) 0 0;
+  padding: rem-375(20) 0 0;
   flex-shrink: 0;
   text-align: center;
 }
